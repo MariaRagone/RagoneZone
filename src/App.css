@@ -1,42 +1,123 @@
+/* === Global Color Palette === */
+:root {
+  --color-primary: #2e353f;      /* Dark gray – main text & headings */
+  --color-accent: #FCC931;       /* Gold – buttons, links, highlights */
+  --color-dark: #2e353f;         /* Deep neutral */
+  --color-light: #FFFFFF;        /* White background */
+  --color-text: #2e353f;         /* Default text */
+  --color-muted: #777777;        /* Secondary text */
+  --max-width: 1024px;           /* Standard max width */
+}
+
+
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-text);
+
+}
+
 #root {
-  max-width: 1280px;
+  width: 100%;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Utility Buttons & Links === */
+a,
+button {
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Global CTA Button */
+.cta-button {
+  background: var(--color-dark);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: var(--color-muted);
+  color: var(--color-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.cta-button-secondary {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cta-button-secondary:hover {
+  background: var(--color-muted);
+  color: var(--color-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* === Responsive Typography === */
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === Page Section === */
+.page {
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* === Responsive Breakpoints === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  p, li {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    width: 90%;
+    max-width: 300px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p, li {
+    font-size: 0.9rem;
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

@@ -1,0 +1,413 @@
+/* === Global Color Palette === */
+:root {
+  --color-primary: #6b2d5c;     /* Deep plum – confident and strong */
+  --color-accent: #f5b700;      /* Warm gold – energetic & empowering */
+  --color-dark: #2d2d2d;        /* Charcoal – grounding neutral */
+  --color-light: #faf7f9;       /* Soft off-white – feminine but clean */
+  --color-text: #333333;        /* Readable dark gray */
+  --color-muted: #c6b8c4;       /* Subtle mauve-gray for secondary text */
+  --max-width: 1024px;          /* Standard max width for content */
+}
+
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-text);
+}
+
+#root {
+  width: 100%;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* === Utility Buttons & Links === */
+a,
+button {
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Global CTA Button */
+.cta-button {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* === Responsive Typography === */
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === Page Section === */
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  p, li {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p, li {
+    font-size: 0.9rem;
+  }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.cta-wrapper {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* Hero Section */
+.home-page .hero {
+  text-align: center;
+  background-color: var(--color-accent);
+  padding: 100px;
+  color: var(--color-dark);
+  padding: 75px;
+  border-radius: 24px;
+  margin-bottom: 2rem;
+}
+
+.home-page .hero .logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+  
+}
+.about-page-logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+  }
+
+.home-page .hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-page .hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+
+.secondary-hero {
+  background-color: #fdf5e6; /* light golden cream for contrast */
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin: 3rem 0;
+}
+
+.secondary-hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.secondary-hero-text {
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.secondary-hero-text h2 {
+  font-size: 1.8rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.secondary-hero-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--color-dark);
+}
+
+.secondary-hero-image {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-hero-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .secondary-hero-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .secondary-hero-image img {
+    max-width: 70%;
+  }
+}
+
+
+/* Intro Section */
+.home-page .intro-section {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.home-page .cta-wrapper {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.home-page .cta-text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-page {
+  background-color: var(--color-light);
+  border: var(--color-accent);
+  color: var(--color-light);
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-page .section-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-page h1 {
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.intro-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-accent);
+  color: var(--color-light);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f4c542;
+  box-shadow: 0 0 4px var(--color-accent);
+}
+
+
+
+/* Services Page Styles */
+.services-page {
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-hero p {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Service Card */
+.service-card {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Decorative background shape */
+.service-shape {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);
+  top: -50px;
+  right: -50px;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.service-card .service-icon {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA Section */
+.cta-wrapper {
+  margin-top: 2rem;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.about-image img {
+  max-width: 200px;        /* or smaller/larger as needed */
+  height: auto;         /* keeps aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;       /* centers the image in the div */
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    width: 70px;
+  }
+}
