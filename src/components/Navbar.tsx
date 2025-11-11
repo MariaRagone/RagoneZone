@@ -1,36 +1,28 @@
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
-import logo from "../assets/ragone-zone-logo-transparent.png";
 
 export default function Navbar() {
-  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* Logo linking to home */}
-      <div className="nav-logo">
-        <Link to="/">
-          <img src={logo} alt="Ragone Zone Logo" className="nav-logo-img" />
-        </Link>
+      <img
+        src="src/assets/ragone-zone-logo-transparent.png"
+        alt="Ragone Zone Logo"
+        className="nav-logo-img"
+      />
+
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Navigation Links */}
-      <ul className="nav-links">
-        <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to="/services">Services</Link>
-        </li>
-        <li className={location.pathname === "/about" ? "active" : ""}>
-          <Link to="/about">About</Link>
-        </li>
-        <li className={location.pathname === "/contact" ? "active" : ""}>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li className={location.pathname === "/blog" ? "active" : ""}>
-          <Link to="https://www.missiondiy.com">Blog</Link>
-        </li>
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/gallery">Gallery</a></li>
       </ul>
     </nav>
   );

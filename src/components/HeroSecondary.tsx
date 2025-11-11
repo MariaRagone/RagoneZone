@@ -1,10 +1,11 @@
 import contactImg from "../assets/ragone-zone-maria.png";
+import CTAButton from "./CTAButton";
 
 interface HeroSecondaryProps {
   onContactClick: () => void;
 }
 
-export default function HeroSecondary({ onContactClick }: HeroSecondaryProps) {
+export default function HeroSecondary({ }: HeroSecondaryProps) {
   return (
     <div className="secondary-hero">
       <div className="secondary-hero-grid">
@@ -14,12 +15,10 @@ export default function HeroSecondary({ onContactClick }: HeroSecondaryProps) {
   With over 15 years of turning “oops” into “ahh, finally!” I’ve tackled just about every project under the sun. From leaky faucets and bathroom rennovations, to kitchen overhauls and even building furniture.
 </p>
 
-
-
-
-          <button className="cta-button" onClick={onContactClick}>
-            Let’s Get Started
-          </button>
+      <CTAButton
+                text="Learn More"
+                onClick={() => (window.location.href = "/about")}
+                />
         </div>
         <div className="secondary-hero-image">
           <img src={contactImg} alt="Maria on a roof tearing out a chimney" />

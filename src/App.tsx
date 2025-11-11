@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import "./App.css";
 import Footer from "./components/Footer";
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery />} />
+
         </Routes>
       </main>
       <Footer />

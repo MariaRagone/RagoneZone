@@ -37,10 +37,10 @@ export default function Footer() {
           <h3>Contact</h3>
           <ul>
             <li>
-              <a href="/contact">Contact Form</a>
+              <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="mailto:info@ragonezone.com">info@ragonezone.com</a>
+              <a href="mailto:maria@ragone.net">Maria@Ragone.net</a>
             </li>
           </ul>
         </div>

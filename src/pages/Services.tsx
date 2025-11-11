@@ -3,6 +3,7 @@ import "./Page.css";
 import "./Services.css";
 import { FaHammer, FaPaintBrush, FaTools, FaRulerCombined, FaCouch } from "react-icons/fa";
 import ServiceCard from "../components/ServiceCard";
+import CTAButton from "../components/CTAButton";
 
 export default function Services() {
   return (
@@ -61,15 +62,10 @@ export default function Services() {
           <p className="cta-text">
             Ready to finally cross a few things off that never-ending to-do list?
           </p>
-          <button
-            className="cta-button"
-            onClick={() => {
-              const contact = document.getElementById("contact");
-              if (contact) contact.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Book Your Project
-          </button>
+          <CTAButton
+          text="Start Your Project"
+          onClick={() => (window.location.href = "/contact")}
+          />
         </div>
       </div>
     </section>

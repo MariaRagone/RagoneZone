@@ -4,12 +4,36 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color-dark);
+  position: relative;
+  z-index: 1000; /* ✅ ensures navbar stays on top */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-dark);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 9999; /* ✅ ensures dropdown stays above all other content */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
 }
 
 .nav-logo-img {
   height: 150px;
   cursor: pointer;
+  position: relative;
+  z-index: 1001; /* ensures logo always appears above background layers */
 }
+
 
 .nav-links {
   list-style: none;
@@ -25,7 +49,38 @@
   font-weight: 500;
 }
 
-.nav-links li.active a {
+.nav-links li a:hover {
   color: var(--color-accent);
-  font-weight: 600;
+}
+
+/* Hide hamburger by default */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 Mobile styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-dark);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 9999; /* ✅ ensures dropdown stays above all other content */
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
+  }
 }
