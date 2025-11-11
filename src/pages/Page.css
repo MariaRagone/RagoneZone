@@ -264,7 +264,6 @@ li {
   background-color: var(--color-light);
   border: var(--color-accent);
   color: var(--color-light);
-  padding: 3rem 1.5rem;
   border-radius: 12px;
   text-align: center;
 }
@@ -277,6 +276,7 @@ li {
 .contact-page h1 {
   color: var(--color-accent);
   margin-bottom: 1.5rem;
+  margin-top: 0;
   font-size: 2rem;
 }
 

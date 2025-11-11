@@ -14,13 +14,10 @@ import img10 from "../assets/ragone-zone-10.jpg";
 import img11 from "../assets/ragone-zone-11.jpg";
 import img12 from "../assets/ragone-zone-12.png";
 
-interface GalleryProps {
-  onContactClick: () => void;
-}
 
-const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12]; // Add more as needed
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12]; 
 
-export default function ({ }: GalleryProps) {
+export default function () {
   return (
     <main className="gallery-page">
       <div className="container">

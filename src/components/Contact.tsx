@@ -1,8 +1,8 @@
-import "./Page.css";
-
 export default function Contact() {
   return (
     <section className="page contact-page">
+            <div className="container">
+
       <div className="section-container">
         <h1>Get in Touch with the Zone 🛠️</h1>
 
@@ -34,6 +34,7 @@ export default function Contact() {
         <p style={{ marginTop: "2rem", fontStyle: "italic" }}>
           I love hearing about projects, big or small. Don’t hesitate to reach out!
         </p>
+      </div>
       </div>
     </section>
   );

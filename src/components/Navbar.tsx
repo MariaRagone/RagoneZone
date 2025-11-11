@@ -23,6 +23,7 @@ export default function Navbar() {
         <li><a href="/services">Services</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/gallery">Gallery</a></li>
+        <li><a href="http://www.missiondiy.com">Blog</a></li>
       </ul>
     </nav>
   );
